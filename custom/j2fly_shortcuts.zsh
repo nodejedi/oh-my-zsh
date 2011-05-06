@@ -5,3 +5,5 @@ alias tunnel_theda='ssh -L 3307:thedacareprod.cqgtmgitcxs6.us-east-1.rds.amazona
 alias jbatv='cd ~/Desktop/tethered; ./tetheredboot -i iBSS.k66ap.RELEASE.dfu -k kernelcache.release.k66'
 
 alias uldb='sudo /usr/libexec/locate.updatedb' #update the location database
+
+alias rvm_install_shortcut='bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)'
