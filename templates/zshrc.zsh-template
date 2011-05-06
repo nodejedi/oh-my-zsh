@@ -24,6 +24,7 @@ export ZSH_THEME="j2fly"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.git-flow-completion.zsh #you have to paste that file to that location then
 
 # Customize to your needs...
 # ---------------------------------------------------------------------
