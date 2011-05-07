@@ -1,57 +1,42 @@
-function savepath() {
-  pwd > ~/.current_path~
-}
+# ------------------------------------------------------------------------------
+#          FILE:  osx.plugin.zsh
+#   DESCRIPTION:  oh-my-zsh plugin file.
+#        AUTHOR:  Jon Kinney (jonkinney@gmail.com)
+#       VERSION:  1.0
+# ------------------------------------------------------------------------------
+
 
 function tab() {
-savepath
-osascript >/dev/null <<EOF
-on do_submenu(app_name, menu_name, menu_item, submenu_item)
-    -- bring the target application to the front
-    tell application app_name
-      activate
-    end tell
-    tell application "System Events"
-      tell process app_name
-        tell menu bar 1
-          tell menu bar item menu_name
-            tell menu menu_name
-              tell menu item menu_item
-                tell menu menu_item
-                  click menu item submenu_item
-                end tell
-              end tell
-            end tell
-          end tell
-        end tell
-      end tell
-    end tell
-end do_submenu
+	if [ $# -ne 1 ]; then
+	    PATHDIR=`pwd`
+	else
+	    PATHDIR=$1
+	fi
 
-do_submenu("Terminal", "Shell", "New Tab", 1)
-EOF
+	osascript -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd $PATHDIR\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"clear\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return"
 }
 
-function itab() {
-savepath
-osascript >/dev/null <<EOF
-on do_submenu(app_name, menu_name, menu_item)
-    -- bring the target application to the front
-    tell application app_name
-      activate
-    end tell
-    tell application "System Events"
-      tell process app_name
-        tell menu bar 1
-          tell menu bar item menu_name
-            tell menu menu_name
-              click menu item menu_item
-            end tell
-          end tell
-        end tell
-      end tell
-    end tell
-end do_submenu
+function quick-look() {
+  (( $# > 0 )) && qlmanage -p $* &>/dev/null &
+}
 
-do_submenu("iTerm", "Shell", "New Tab")
-EOF
+function man-preview() {
+  man -t "$@" | open -f -a Preview
+}
+
+function trash() {
+  local trash_dir="${HOME}/.Trash"
+  local temp_ifs=$IFS
+  IFS=$'\n'
+  for item in "$@"; do
+    if [[ -e "$item" ]]; then
+      item_name="$(basename $item)"
+      if [[ -e "${trash_dir}/${item_name}" ]]; then
+        mv -f "$item" "${trash_dir}/${item_name} $(date "+%H-%M-%S")"
+      else
+        mv -f "$item" "${trash_dir}/"
+      fi
+    fi
+  done
+  IFS=$temp_ifs
 }
