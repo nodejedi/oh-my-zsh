@@ -21,7 +21,7 @@ export ZSH_THEME="j2fly"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git git-flow textmate ruby)
+plugins=(git git-flow rails textmate ruby cap brew gem github mysql osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.git-flow-completion.zsh #you have to paste that file to that location then
