@@ -7,3 +7,5 @@ alias jbatv='cd ~/Desktop/tethered; ./tetheredboot -i iBSS.k66ap.RELEASE.dfu -k 
 alias uldb='sudo /usr/libexec/locate.updatedb' #update the location database
 
 alias rvm_install_shortcut='bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)'
+
+alias zomg='echo ZOMG'
