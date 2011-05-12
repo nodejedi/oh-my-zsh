@@ -1,9 +1,13 @@
 h2. My README tweaks
 
-1. Modified the .zshrc template to include a line you need for rvm
-2. Modified the .zshrc template to use the j2fly theme
-3. This requires a python script in ~/bin/batcharge.py (though I don't use that anymore)
-  * More details here: http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+h3. Modified the following files:
+* install.sh
+* j2fly.zsh-theme
+* templates/zshrc.zsh-template
+* README
+* custom/j2fly_shortcuts.zsh
+* plugins/osx/osx.plugin.zsh
+* plugins/cap/cap.plugin.zsh
 
 h3. The automatic installer... (do you trust me? I customized this for me specifically so be warned)
 
