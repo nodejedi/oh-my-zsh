@@ -291,8 +291,8 @@ If you like Visor, I highly recommend that you check out [TotalFinder](http://to
 
 ## Wrap up
 
-Hopefully you got some insight in to how I have my terminal setup and it's inspired you to go customize your own prompt and setup visor the way you like. It's ok to spend a few hours getting things setup just the way you like so that you can have a more pleasant terminal experience every time you sit down to develop. Just remember to commit your changes to your github fork so you can easily restore your preferences when you reformat your laptop, or heck... I install my prompt on servers that I am the sys admin for!
+Hopefully you got some insight into how I have my terminal setup and it's inspired you to go customize your own prompt and maybe even take a look at Visor. It's ok to spend a few hours getting things setup just the way you like so that you can have a more pleasant terminal experience every time you sit down to code. Just remember to commit your changes to your github fork so you can easily restore your oh-my-zsh config when you reformat your laptop. I also install my fork of the prompt on servers that I am the sys admin for!
 
 Post any questions or share your thoughts in the comments below. I look forward to hearing from you about your own oh-my-zsh experience!
 
-~Jon
+-Jon
