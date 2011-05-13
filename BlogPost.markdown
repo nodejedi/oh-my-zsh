@@ -1,11 +1,12 @@
 # It's not enough to bash in heads you've got to bash in minds...with ZSH
 
-<table border="0" cellspacing="0" cellpadding="0">
+<table border="0" cellspacing="5" cellpadding="5">
   <tr>
     <td>Captain Hammer told me they call it bash <a href="http://www.youtube.com/watch?v=VqCXXMvMm6g#t=77s" target="_blank">for a reason</a>... don't say I didn't warn you. Of course I'm talking about my favorite superhero and the default shell in OS X respectively. Now, I'm not here to tell you that using bash is dumb and that you can only be a good developer if you use an alternate shell like ZSH, but I am here to say that when I use bash *I feel* dumb. Bash just seems to get in my way, probably because I never took the time to properly customize it. But now the hard work of terminal customization has been done for us by the oh-my-zsh community. A big thanks to all that have contributed!</td>
-    <td><img src='http://cl.ly/6ih2/Captain_Hammer.jpg'></td>
+    <td><img src='http://f.cl.ly/items/3g423i330e2I0I412S40/Captain_Hammer.jpg'></td>
   </tr>
 </table>
+
 
 ## Who is this for?
 This overview is geared toward developers that are new to working a lot at the command line or for folks that haven't ever tried to customize their prompt. If you're tired of your ugly and unhelpful default shell settings and aren't sure where to get started with customizing it from scratch then both oh-my-zsh and this walkthrough are for you.
