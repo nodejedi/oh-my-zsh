@@ -34,7 +34,7 @@ Once you have your wget error resolved re-run the installer command and proceed.
 
 If you didn't get an error during installation then you should receive something similar to the following terminal output:
 
-[![oh-my-zsh installation terminal output](http://cl.ly/6gJB/Screen\_shot\_2011-05-12\_at\_12.35.14_PM.png "view larger version of oh-my-zsh installation terminal output")](http://cl.ly/6hTL/Screen_shot_2011-05-12_at_11.30.15_AM.png)
+[![oh-my-zsh installation terminal output](http://f.cl.ly/items/1y3S140L26263d0X3H1g/Screen%20shot%202011-05-12%20at%2011.30.15%20AM.png "view larger version of oh-my-zsh installation terminal output")](http://cl.ly/6hTL/Screen_shot_2011-05-12_at_11.30.15_AM.png)
 
 All that's left to do it open a new tab or terminal window and you're off and running! The new theme that you see is the robbyrussell theme. It's pretty cool, but it might not include everything *you* want out of your prompt. In a second I'll [show you my theme](#mytheme) and help you create your own, but first let's take a side trip and make sure our .zshrc file is setup properly.
 
