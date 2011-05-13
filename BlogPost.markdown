@@ -1,7 +1,6 @@
 # It's not enough to bash in skulls you have to bash in minds...with ZSH
 
-
-I think they call it bash for a reason... it makes me want to bash things. Of course I'm talking about the default shell in OS X. Now, I'm not here to tell you that using bash is dumb and that you can only be a good developer if you use an alternate shell like ZSH, but I am here to say that when I use bash *I* feel dumb. Bash just seems to get in my way, probably because I never took the time to properly customize it. But now the hard work of terminal customization has been done for us by Robby Russel and the rest of the oh-my-zsh community. A big thanks to all that have contributed!
+<span id='hammer' style="float:right;padding:0 0 4px 8px;">![Captain Hammer](http://cl.ly/6ih2/Captain_Hammer.jpg "Captain Hammer")</span>Captain Hammer told me they call it bash <a href="http://www.youtube.com/watch?v=VqCXXMvMm6g#t=77s" target="_blank">for a reason</a>... don't say I didn't warn you. Of course I'm talking about my favorite superhero and the default shell in OS X respectively. Now, I'm not here to tell you that using bash is dumb and that you can only be a good developer if you use an alternate shell like ZSH, but I am here to say that when I use bash *I feel* dumb. Bash just seems to get in my way, probably because I never took the time to properly customize it. But now the hard work of terminal customization has been done for us by the oh-my-zsh community. A big thanks to all that have contributed!
 
 
 ## Who is this for?
@@ -11,17 +10,17 @@ This overview is geared toward developers that are new to working a lot at the c
 ## Wait...what is oh-my-zsh again?
 Oh-my-zsh is available [on github](https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh github URL") where it's described as:
 
->A community-driven framework for managing your zsh configuration. Includes optional plugins for various tools (rails, git, OSX, brew,...), nearly 80 terminal themes, and an auto-updating tool so that you can keep up with the latest improvements from the community." 
+>"A community-driven framework for managing your zsh configuration. Includes optional plugins for various tools (rails, git, OSX, brew,...), nearly 80 terminal themes, and an auto-updating tool so that you can keep up with the latest improvements from the community." 
 
 
 ## OK, I'm convinced... help me get it installed!
-There is a great README provided on the github page referenced above, but I'll highlight a few items here. The first and most critical step is one you actually won't find in the README... fork the repository and get a copy that you can tweak on yourself. The main reason is so you have a version of oh-my-zsh that can easily be installed on any server with all your custom theme settings and aliases. We'll get to customization later; oh-my-zsh has a great uninstaller so it's easy to try out one fork and remove all traces of that code easily so you can install another fork (probably your own) later. For now, let's just dive in!
+There is a great README provided on the github page referenced above, but I'll highlight a few items here. The first and most critical step is one you actually won't find in the README... **fork the repository and get a copy that you can tweak on yourself**. The main reason is so you have a version of oh-my-zsh that can easily be installed on any server with all your custom theme settings and aliases. We'll get to customization later but keep in mind that installing oh-my-zsh is not at all permanent. There is a great uninstaller so it's easy to try out one fork and remove all traces of that code easily so you can install another fork (probably your own) later. Or if you try it out but hate it, **getting back to your old prompt is a single "uninstall\_oh\_my\_zsh" command away**. For now, let's just dive in!
 
 To get oh-my-zsh installed simply issue this single command in your current terminal:
     
     wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
     
-**Note:** even if you're doing this from your own fork it's still going out to robbyrussel's git repo to do the clone. I'll help you fix that [later](#editinstallsh).
+**Note:** even if you're doing this from your own fork it's still going out to Robby Russell's git repo to do the clone. I'll help you fix that [later](#editinstallsh).
 
 One of two things will happen next. If you're on OS X and don't have wget installed or accessible to your path then you'll get an error. If that's the case then go check out [Homebrew](http://mxcl.github.com/homebrew/). Conveniently the demo they give is installing wget:
 
@@ -166,19 +165,20 @@ So now that we have the theme setup and RVM loaded properly it's time to show yo
 
 ### Aliases
 
-    | Alias            | Full Command                           | Location                           |
-    |:-----------------|:---------------------------------------|:-----------------------------------|
-    | l                | ls -la                                 | lib/aliases.zsh                    |
-    | ll               | ls -l                                  | lib/aliases.zsh                    |
-    | ..               | cd ..                                  | lib/directories.zsh                |
-    | ...              | cd ../..                               | directories.zsh                    |
-    | mcd(cool_folder) | mkdir -p cool_folder && cd cool_folder | lib/directories.zsh                |
-    | gst              | git status                             | plugins/git/git.plugin.zsh         |
-    | gca -m "commit"  | git commit -a -m "commit"              | plugins/git/git.plugin.zsh         |
-    | gp               | git push                               | plugins/git/git.plugin.zsh         |
-    | gco              | git checkout                           | plugins/git/git.plugin.zsh         |
-    | bi               | bundle install                         | plugins/bundler/bundler.plugin.zsh |
-    | bu               | bundle update                          | plugins/bundler/bundler.plugin.zsh |
+    | Alias           | Full Command                       | Location                           |
+    |:----------------|:-----------------------------------|:-----------------------------------|
+    | l               | ls -la                             | lib/aliases.zsh                    |
+    | ll              | ls -l                              | lib/aliases.zsh                    |
+    | ..              | cd ..                              | lib/directories.zsh                |
+    | ...             | cd ../..                           | directories.zsh                    |
+    | mcd(my_folder)  | mkdir -p my_folder && cd my_folder | lib/directories.zsh                |
+    | gst             | git status                         | plugins/git/git.plugin.zsh         |
+    | gb              | git branch                         | plugins/git/git.plugin.zsh         |
+    | gca -m "commit" | git commit -a -m "commit"          | plugins/git/git.plugin.zsh         |
+    | gp              | git push                           | plugins/git/git.plugin.zsh         |
+    | gco             | git checkout                       | plugins/git/git.plugin.zsh         |
+    | bi              | bundle install                     | plugins/bundler/bundler.plugin.zsh |
+    | bu              | bundle update                      | plugins/bundler/bundler.plugin.zsh |
 
 When you need a break to laugh, load up the "lol"" plugin (plugins/lol/lol.plugin.zsh) and get fun/silly aliases like:
 
@@ -226,11 +226,11 @@ Files you'll want to edit:
 
 
 ### <span id="editinstallsh">install.sh</span>
-Just because the installer takes a git repo at the command line doesn't mean that is the git repo it'll actually clone to your ~/.oh-my-zsh folder during install. If you look at the install.sh file in the "tools" folder [you'll see on line 8](https://github.com/j2fly/oh-my-zsh/blob/master/tools/install.sh#L8) (as of this writing) that is where the git repo is specified. Mine is: 
+Just because the installer takes a git repo at the command line doesn't mean that is the git repo it'll actually clone to your ~/.oh-my-zsh folder during install. If you look at the install.sh file in the "tools" folder [you'll see line 8](https://github.com/j2fly/oh-my-zsh/blob/master/tools/install.sh#L8) (as of this writing) is where the git repo is specified. Mine is: 
 
     /usr/bin/env git clone https://github.com/j2fly/oh-my-zsh.git ~/.oh-my-zsh
 
-So make sure to change that URL to be **your** repo's URL.
+Make sure to change that URL to be **your** repo's URL.
 
 ### Your Theme
 Just add your own something.zsh-theme to the themes folder and specify it in your templates/zshrc.zsh-template so it's the theme specified when you install from your fork.
@@ -270,6 +270,24 @@ To this:
 
 Using your clone URL, not mine :)
 
+## Making it all rock with a dark background and Visor
 
-# TL;DR
-Oh-my-zsh is available [on github](https://github.com/robbyrussell/oh-my-zsh "oh-my-zsh github URL") fork it, customize it, install it, and have fun.
+I have a 1920x1200 display and I use [Visor](http://visor.binaryage.com/) exclusively for working with my terminal. I find that even with all the screen real-estate that I could possibly want, the terminal just isn't something I want to dedicate to a portion of pixels on my screen. Visor helps keep the terminal front and center when you need it and totally hidden when you don't.
+
+The key bindings to "fade" or "fly in" the terminal window are ctrl+\` or if you have the double tap ctrl option enabled then you can hit ctrl+ctrl to pop open the window. I prefer to leave the double tap option off however as I find that I usually only accidentally trigger the visor when it's enabled.
+
+With today's widescreen monitors I think it makes the most sense to have the terminal fly in from the right hand side. I also keep my dock attached to the left side of my screen so that I can work at full height in the "middle". I have my terminal window settings configured to have it take up 129 columns and 24 rows. This makes the terminal fly in to the perfect spot to leave the other half of my screen (minus the room for the dock positioned on the left) available for a browser or code.
+
+I use the awesome [SizeUp](http://irradiatedsoftware.com/sizeup/) and [Cinch](http://irradiatedsoftware.com/cinch/) apps to allow me to position any given window to either the left or right half of my screen (like the windows 7 snap feature) which makes this setup even cooler.
+
+![My full desktop with visor open](http://cl.ly/6iMW/full_desktop.png)
+
+If you like Visor, I highly recommend that you check out [TotalFinder](http://totalfinder.binaryage.com/) as well. It's also from BinaryAge, an indy Mac software shop so support both them and Irradiated Software with a purchase or donation if you like their tools!
+
+## Wrap up
+
+Hopefully you got some insight in to how I have my terminal setup and it's inspired you to go customize your own prompt and setup visor the way you like. It's ok to spend a few hours getting things setup just the way you like so that you can have a more pleasant terminal experience every time you sit down to develop. Just remember to commit your changes to your github fork so you can easily restore your preferences when you reformat your laptop, or heck... I install my prompt on servers that I am the sys admin for!
+
+Post any questions or share your thoughts in the comments below. I look forward to hearing from you about your own oh-my-zsh experience!
+
+~Jon
