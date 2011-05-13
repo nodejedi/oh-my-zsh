@@ -34,7 +34,7 @@ Once you have your wget error resolved re-run the installer command and proceed.
 
 If you didn't get an error during installation then you should receive something similar to the following terminal output:
 
-[![oh-my-zsh installation terminal output](http://f.cl.ly/items/1y3S140L26263d0X3H1g/Screen%20shot%202011-05-12%20at%2011.30.15%20AM.png "view larger version of oh-my-zsh installation terminal output")](http://cl.ly/6hTL/Screen_shot_2011-05-12_at_11.30.15_AM.png)
+[![oh-my-zsh installation terminal output](http://f.cl.ly/items/3t1H2O313L2N0O1s3p1y/Screen%20shot%202011-05-12%20at%2012.35.14%20PM.png "view larger version of oh-my-zsh installation terminal output")](http://cl.ly/6hTL/Screen_shot_2011-05-12_at_11.30.15_AM.png)
 
 All that's left to do it open a new tab or terminal window and you're off and running! The new theme that you see is the robbyrussell theme. It's pretty cool, but it might not include everything *you* want out of your prompt. In a second I'll [show you my theme](#mytheme) and help you create your own, but first let's take a side trip and make sure our .zshrc file is setup properly.
 
@@ -96,7 +96,7 @@ Much better :) You can see I added "/usr/bin/mysql" to the path because I need i
 
 As promised, here is the theme that I am currently running:
 
-[![oh-my-zsh j2fly theme screen shot](http://cl.ly/6g2h/zsh_prompt_annotated_small.png "view larger version of oh-my-zsh j2fly theme screen shot")](http://cl.ly/6gqi)
+[![oh-my-zsh j2fly theme screen shot](http://f.cl.ly/items/440l0s473z1j3w1A162t/zsh%20prompt%20annotated%20small.png "view larger version of oh-my-zsh j2fly theme screen shot")](http://cl.ly/6gqi)
 
 Below is the zsh-theme file that I'm specifying in my .zshrc config. This theme was made possible by combining ideas from many of the excellent themes that are already out there and adding a few of my own tweaks. The color scheme was inspired from [a post](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/) I read a year or so ago by Steve Losh that introduced me to oh-my-zsh. Again, a huge thanks to all the authors that have contributed forks and themes.
 
@@ -209,7 +209,7 @@ When you need a break to laugh, load up the "lol"" plugin (plugins/lol/lol.plugi
 
 ZSH is great at tab completion and more specifically progressive tab completion. You can tab through some directories and hit enter to accept that directory as the one you want at the first level, then continue tabbing through the next deepest set of directories without executing the command until you're ready. In my experience, bash would commit your current text as a command if you hit enter mid-tab completion. Try out tab completion for yourself! You can even tab complete to remote servers. If you're trying to scp a file to a remote server and you don't remember what user directory you want to put it under you can do something like this:
 
-![Tab completion to remote server](http://cl.ly/6hEa/Screen_shot_2011-05-12_at_2.49.35_PM.png)
+![Tab completion to remote server](http://f.cl.ly/items/1H3t0d3M3z3l1I2B3Q0X/Screen%20shot%202011-05-12%20at%202.49.35%20PM.png)
 
 
 ## Customization
@@ -280,7 +280,7 @@ With today's widescreen monitors I think it makes the most sense to have the ter
 
 I use the awesome [SizeUp](http://irradiatedsoftware.com/sizeup/) and [Cinch](http://irradiatedsoftware.com/cinch/) apps to allow me to position any given window to either the left or right half of my screen (like the windows 7 snap feature) which makes this setup even cooler.
 
-![My full desktop with visor open](http://cl.ly/6iMW/full_desktop.png)
+![My full desktop with visor open](http://f.cl.ly/items/363w3K0j3I0K0d25111j/full%20desktop.png)
 
 If you like Visor, I highly recommend that you check out [TotalFinder](http://totalfinder.binaryage.com/) as well. It's also from BinaryAge, an indy Mac software shop so support both them and Irradiated Software with a purchase or donation if you like their tools!
 
