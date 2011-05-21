@@ -8,4 +8,4 @@ alias uldb='sudo /usr/libexec/locate.updatedb' #update the location database
 
 alias rvm_install_shortcut='bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)'
 
-alias zomg='echo ZOMG'
+alias flush_dns='dscacheutil -flushcache'
