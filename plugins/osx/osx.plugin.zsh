@@ -7,13 +7,23 @@
 
 
 function tab() {
-	if [ $# -ne 1 ]; then
-	    PATHDIR=`pwd`
-	else
-	    PATHDIR=$1
-	fi
+  if [ $# -ne 1 ]; then
+      PATHDIR=`pwd`
+  else
+      PATHDIR=$1
+  fi
 
-	osascript -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd $PATHDIR\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"clear\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return"
+  osascript -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd $PATHDIR\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"clear\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return"
+}
+
+function cdoi() {
+  if [ $# -ne 1 ]; then
+      PATHDIR=`pwd`
+  else
+      PATHDIR=$1
+  fi
+
+  osascript -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd ..\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd $PATHDIR\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return"
 }
 
 function quick-look() {
