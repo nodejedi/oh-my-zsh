@@ -14,16 +14,22 @@ alias flush_dns='dscacheutil -flushcache'
 
 alias vim='mvim -v'
 
+# DB Stuff
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgtail='tail -f /usr/local/var/postgres/server.log'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
-alias pandora='pianobar'
-
 alias mysqlstart='mysql.server start'
 alias mysqlstop='mysql.server stop'
+
+alias startdbs='pgstart;mysqlstart' # now both at once!
 
 alias goodbye='sudo shutdown -r now'
 
 # you need to use bundle exec before each command you run in a app controled by bundler so this alias helps make that easier
 alias b='bundle exec $*'
+
+# cmd line music FTW
+alias pandora='pianobar'
+
+alias c='clear'
