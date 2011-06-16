@@ -12,7 +12,8 @@ m()
   shopt -s extglob  # Enable extended globbing
    
   # Invoke TextMate upon all the files and directories except those listed
-  mate !(@(cache|db|log|tmp)) "$@"
+  # mate !(@(cache|db|log|tmp)) "$@"
+  mate !(@(cache|log|tmp)) "$@"
   
   shopt -u extglob  # Disable extended globbing
 }
