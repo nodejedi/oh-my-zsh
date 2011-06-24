@@ -11,13 +11,16 @@ h3. Modified the following files:
 
 h3. The automatic installer... (do you trust me? I customized this for me specifically so be warned)
 
-@wget --no-check-certificate https://github.com/j2fly/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
+@wget --no-check-certificate https://github.com/jaigouk/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
 
 h3. Make sure to install ZSH and Tree
 
 @apt-get install zsh tree@
 
 A handful of functions, auto-complete helpers, and stuff that makes you shout...
+
+h3. Tutorial written by j2fly
+* http://intridea.com/2011/5/18/its-not-enough-to-bash-in-heads-youve-got-to-bash-in-minds-with-zsh
 
 bq. "OH MY ZSHELL!"
 
