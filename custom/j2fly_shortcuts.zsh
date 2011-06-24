@@ -12,8 +12,6 @@ alias rvm_install_shortcut='bash < <(curl -s https://rvm.beginrescueend.com/inst
 
 alias flush_dns='dscacheutil -flushcache'
 
-alias vim='mvim -v'
-
 # DB Stuff
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgtail='tail -f /usr/local/var/postgres/server.log'
