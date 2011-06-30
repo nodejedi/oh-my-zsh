@@ -22,7 +22,7 @@ alias mysqlstop='mysql.server stop'
 
 alias startdbs='pgstart;mysqlstart' # now both at once!
 
-alias goodbye='sudo shutdown -r now'
+alias goodbye='sudo shutdown now'
 
 # you need to use bundle exec before each command you run in a app controled by bundler so this alias helps make that easier
 alias b='bundle exec $*'
