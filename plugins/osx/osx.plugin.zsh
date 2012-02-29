@@ -1,31 +1,75 @@
-alias showfiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder'
-alias hidefiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder'
+# ------------------------------------------------------------------------------
+#          FILE:  osx.plugin.zsh
+#   DESCRIPTION:  oh-my-zsh plugin file.
+#        AUTHOR:  Sorin Ionescu (sorin.ionescu@gmail.com)
+#       VERSION:  1.0.1
+# ------------------------------------------------------------------------------
 
-# Recursively delete .DS_Store files
-alias rm-dsstore="find . -name '*.DS_Store' -type f -delete"
-
-function savepath() {
-  pwd > ~/.current_path~
-}
 
 function tab() {
-  if [ $# -ne 1 ]; then
-      PATHDIR=`pwd`
-  else
-      PATHDIR=$1
-  fi
+  local command="cd \\\"$PWD\\\""
+  (( $# > 0 )) && command="${command}; $*"
 
-  osascript -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd $PATHDIR\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"clear\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return"
+  the_app=$(
+    osascript 2>/dev/null <<EOF
+      tell application "System Events"
+        name of first item of (every process whose frontmost is true)
+      end tell
+EOF
+  )
+
+  [[ "$the_app" == 'Terminal' ]] && {
+    osascript 2>/dev/null <<EOF
+      tell application "System Events"
+        tell process "Terminal" to keystroke "t" using command down
+        tell application "Terminal" to do script "${command}" in front window
+      end tell
+EOF
+  }
+
+  [[ "$the_app" == 'iTerm' ]] && {
+    osascript 2>/dev/null <<EOF
+      tell application "iTerm"
+        set current_terminal to current terminal
+        tell current_terminal
+          launch session "Default Session"
+          set current_session to current session
+          tell current_session
+            write text "${command}"
+          end tell
+        end tell
+      end tell
+EOF
+  }
 }
 
-function cdoi() {
-  if [ $# -ne 1 ]; then
-      PATHDIR=`pwd`
-  else
-      PATHDIR=$1
-  fi
+function pfd() {
+  osascript 2>/dev/null <<EOF
+    tell application "Finder"
+      return POSIX path of (target of window 1 as alias)
+    end tell
+EOF
+}
 
-  osascript -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd ..\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return" -e "Tell application \"System Events\" to tell process \"Terminal\" to keystroke \"cd $PATHDIR\"" -e "Tell application \"System Events\" to tell process \"Terminal\" to key down return"
+function pfs() {
+  osascript 2>/dev/null <<EOF
+    set output to ""
+    tell application "Finder" to set the_selection to selection
+    set item_count to count the_selection
+    repeat with item_index from 1 to count the_selection
+      if item_index is less than item_count then set the_delimiter to "\n"
+      if item_index is item_count then set the_delimiter to ""
+      set output to output & ((item item_index of the_selection as alias)'s POSIX path) & the_delimiter
+    end repeat
+EOF
+}
+
+function cdf() {
+  cd "$(pfd)"
+}
+
+function pushdf() {
+  pushd "$(pfd)"
 }
 
 function quick-look() {
@@ -52,3 +96,4 @@ function trash() {
   done
   IFS=$temp_ifs
 }
+
