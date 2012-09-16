@@ -19,6 +19,7 @@ h3. Make sure to install ZSH and Tree
 
 A handful of functions, auto-complete helpers, and stuff that makes you shout...
 
+
 h3. Tutorial written by j2fly
 * http://intridea.com/2011/5/18/its-not-enough-to-bash-in-heads-youve-got-to-bash-in-minds-with-zsh
 
@@ -90,9 +91,13 @@ h2. Help out!
 
 I'm far from being a zsh-expert and suspect there are many ways to improve. If you have ideas on how to make the configuration easier to maintain (and faster), don't hesitate to fork and send pull requests!
 
-h3. Send us your theme!
+h3. (Don't) Send us your theme! (for now)
 
-I'm hoping to collect a bunch of themes for our command prompts. You can see existing ones in the @themes/@ directory.
+-I'm hoping to collect a bunch of themes for our command prompts. You can see existing ones in the @themes/@ directory.-
+
+We have enough themes for the time being. Please fork the project and add on in there, you can let people know how to grab it from there.
+
+
 
 h2. Contributors
 
