@@ -46,9 +46,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-#export PATH=/home/jaigouk/.rvm/gems/ruby-1.9.2-p290/bin:/home/jaigouk/.rvm/gems/ruby-1.9.2-p290@global/bin:/home/jaigouk/.rvm/rubies/ruby-1.9.2-p290/bin:/home/jaigouk/.rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+#export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 export PATH=/home/jaigouk/.nvm/v0.6.12/bin:$PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+eval "$(rbenv init -)"
