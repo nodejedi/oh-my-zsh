@@ -4,6 +4,7 @@ projects.zsh
 custom/*
 !custom/example
 !custom/example.zsh
+!custom/load_nvm_rvm.zsh
 *.swp
 !custom/example.zshcache
 cache/
